@@ -1,0 +1,52 @@
+body {
+  background: #333;
+  color: #fff; }
+
+.navbar {
+  border-bottom: #4e071fe7 3px solid;
+  opacity: 0.8; }
+
+    #home-section {
+  background-image: url("static/css/img/home1.jpeg") no-repeat center top fixed !important;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 700px; }
+  #home-section .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px; }
+  #home-section .container .login {
+    display: inline-block; }
+  #home-section .home-inner {
+    padding-top: 150px; }
+  #home-section .card-form {
+    opacity: 0.7; }
+  #home-section .card-block {
+    background-color: #4e071fe7;
+    outline: none; }
+  #home-section .fa {
+    color: #4e071fe7;
+    background: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 25px; }
+
+#explore-head-section {
+  background-color: #4e071fe7;
+  opacity: 0.6; }
+
+#explore-section {
+  color: black; }
+  #explore-section .fa {
+    color: #fff;
+    background: #4e071fe7;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 25px; }
+
+@media (max-width: 576px) {
+  nav .container {
+    width: 100%; } }
