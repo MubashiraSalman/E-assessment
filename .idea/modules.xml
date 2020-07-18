@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/facerecognition.iml" filepath="$PROJECT_DIR$/.idea/facerecognition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/E-assessment.iml" filepath="$PROJECT_DIR$/.idea/E-assessment.iml" />
     </modules>
   </component>
 </project>

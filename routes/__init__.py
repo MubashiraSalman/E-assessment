@@ -17,3 +17,9 @@ def index_get2():
 @app.route('/login.html', methods=['GET'])
 def login_get():
     return render_template('login.html')
+
+
+@app.route('/test.html', methods=['POST'])
+def start_test():
+    return render_template('test.html')
+
