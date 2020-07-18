@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz!</title>
+    </head>
+    <body>
+<style>
+
+/* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+body
+{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.header{
+  background: url("../img/h3.jpeg") no-repeat center top fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 763px
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 763px;
+}
+.head
+{
+    height: 60px;
+    width: 795px;
+    background: #865375;
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    font-size: 25pt;
+    padding: 12px 0 0 0;
+    margin: 15px auto;
+}
+
+.container
+{
+    padding: 20px;
+    height: 384px;
+    width : 320px;
+    background: #fff;
+    position: absolute;
+    top : 50%;
+    left: 51%;
+    transform: translate(-50%,-50%);
+    border-radius : 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1),
+    inset 0 0 0 rgba(0,0,0,0.1);
+}
+.n
+{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: #c9537a;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0 0 0;
+    position: absolute;
+    left : 25px;
+    top: 20px;
+}
+.q
+{
+    position: absolute;
+    left : 70px;
+    top: 9px;
+    font-size: 18pt;
+}
+.op
+{
+    display: inline-block;
+    height: 30px;
+    width: 130px;
+    background: #865375;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    padding: 6px 0 0 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.op:nth-child(1)
+{
+    top: 110px;
+    left : 20px;
+}
+.op:nth-child(2)
+{
+    top: 110px;
+    right : 20px;
+}
+.op:nth-child(3)
+{
+    top: 165px;
+    left : 20px;
+}
+.op:nth-child(4)
+{
+    top: 165px;
+    right : 20px;
+}
+.back{
+    text-decoration-line: none;
+    margin-right: 90px;
+    position: absolute;
+    height: 28px;
+    width: 85px;
+    background: #55344a;
+    justify-self: center;
+    top: 542px;
+    right: 708px;
+    border-radius: 8px;
+    color : #fff;
+    text-align: center;
+    padding: 9px 35px 9px 35px;
+    font-size: 21px;
+    cursor: pointer;
+
+}
+.next
+{
+    margin-right: 90px;
+    position: absolute;
+    height: 28px;
+    width: 85px;
+    background: #55344a;
+    justify-self: center;
+    top : 230px;
+    right: 6px;
+    border-radius: 8px;
+    color : #fff;
+    text-align: center;
+    padding: 9px 35px 9px 35px;
+    font-size: 21px;
+    cursor: pointer;
+}
+.meta
+{
+    position: absolute;
+    bottom: 59px;   
+    left : 50%;
+    transform: translateX(-50%);
+    height: 10px;
+    width: 80%;
+    border-top : 1px solid #fff;
+    padding: 25px 0 0 0;
+    text-transform: uppercase;
+    
+}
+.a-t
+{
+    float: right;
+}
+.after-quiz
+{
+    height: 360px;
+    width : 320px;
+    background: #fff;
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius : 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1),
+    inset 0 0 0 rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 150px 0 0 0;
+    font-size: 22pt;
+    text-transform: uppercase;
+    display: none;
+    
+}
+</style>
+
+
+
+      <div class="header">
+          <div class="overlay">
+       <div id="quiz-holder" class="quiz-holder">
+       <div class="head">Lets's Begin The Quiz</div>
+           <div class="container">
+           <div class="n"><p id="n">0</p></div>
+               <div class="question">
+                   <p class="q" id="q">
+                       This is a demo of question. Abother demo is here.
+                   </p>
+               </div>
+               <div class="options" 
+                    style="padding: 9px 35px 9px 35px;
+                    font-size: 21px;">
+                   <div class="op" id="1">Option 1</div>
+                   <div class="op" id="2">Option 1</div>
+                   <div class="op" id="3">Option 1</div>
+                   <div class="op" id="4">Option 1</div>
+                   </div>
+                   <div onclick="next()" class="next">Next</div>
+                   
+               </div>
+               <a class="back" href="/index.html">Back</a>
+                              
+               <div class="meta" style="color: azure;">
+                   Score : <span class="score" id="score">0</span>
+                   <span class="a-t" style="color: azure;">Answered : <span class="played" id="played">0</span> / <span id="total"></span></span>
+               </div>
+           </div>
+       </div>
+    </div> 
+ </div>
+
+
+        <div id="a-q" class="after-quiz">
+            <p class="thanks">Quiz Ended! :)</p>
+        </div>
+       
+       
+        <script>
+            var question,options,questionIndex,score,scoreSpan,total, playedSpan,played,numSpan,num,q_holder,a_q,a_s;
+            question = document.getElementById('q');
+            options = document.getElementsByClassName('op');
+            questionIndex = 0;
+            score = 1;
+            played = 1;
+            num = 1;
+            total = document.getElementById("total");
+            scoreSpan = document.getElementById("score");
+            playedSpan = document.getElementById("played");
+            numSpan = document.getElementById("n");
+            q_holder = document.getElementById("quiz-holder");
+            a_q = document.getElementById("a-q");
+            a_s = document.getElementById("after-score");
+            
+            questions = [
+                new Question("Which is five?",["5","7","10","12"], "5"),
+                new Question("Which is two?",["2","9","60","1"], "2"),
+                new Question("Which is Sum?",["p","&","+","%"], "+"),
+                new Question("How many days a month has?",["30","21","10","32"], "30"),
+                new Question("What is fluid?",["Milk","Rose","Marker","Bank"], "Milk"),
+                new Question("How are you?",["Fine", "Good", "Very Good", "Bad"], "Fine")
+                
+                ];
+                
+                
+            
+            
+            function Question(text, choices, answere)
+            {
+                this.text = text;
+                this.choices = choices;
+                this.answere = answere;
+                
+                this.correct = function(ans)
+                {
+                    return this.answere == ans;
+                }
+            }
+            
+           
+                
+                question.innerHTML = questions[questionIndex].text;
+                for (i = 0; i < questions[questionIndex].choices.length; i++)
+                {
+                    options[i].innerHTML = questions[questionIndex].choices[i];
+                    
+                }
+                
+                
+          
+            
+            function next(){
+                questionIndex++;
+                playedSpan.innerHTML = played++;
+                numSpan.innerHTML = num++;
+                if (questionIndex !== questions.length)
+                {
+                question.innerHTML = questions[questionIndex].text;
+                for (i = 0; i < questions[questionIndex].choices.length; i++)
+                {
+                    options[i].innerHTML = questions[questionIndex].choices[i];
+                }
+                }
+                else
+                {
+                    questionIndex = 0;
+                    played = 0;
+                    num = 0;
+                    q_holder.style.display = "none";
+                    a_q.style.display = "block";
+                    
+                    
+                }
+            }
+            
+            actionHandler();
+            
+            
+            
+            
+            
+            function actionHandler()
+            {
+                a = document.getElementById('1');
+                b = document.getElementById('2');
+                c = document.getElementById('3');
+                d = document.getElementById('4');
+                
+                
+                a.addEventListener("click", function (){
+                    if (questions[questionIndex].answere == questions[questionIndex].choices[0])
+                    {
+                        scoreSpan.innerHTML = score++;
+                    
+                        correct.play();
+                        
+                    
+                    }
+                    else
+                    {
+                       wrong.play();
+                        
+                        
+                    }
+                    
+                });
+                
+                b.addEventListener("click", function () {
+                    if (questions[questionIndex].answere == questions[questionIndex].choices[1])
+                    {
+                        scoreSpan.innerHTML = score++;
+                        
+                       correct.play();
+                    
+                        
+                    }
+                    else
+                    {
+                        wrong.play();
+                        
+                        
+                    }
+                });
+                
+                c.addEventListener("click", function () {
+                    if (questions[questionIndex].answere == questions[questionIndex].choices[2])
+                    {
+                        scoreSpan.innerHTML = score++;
+                        
+                        correct.play();
+                        
+                        
+                    }
+                    else
+                    {
+                        wrong.play();
+                        
+                        
+                    }
+                });
+                
+                d.addEventListener("click", function () {
+                    if (questions[questionIndex].answere == questions[questionIndex].choices[3])
+                    {
+                        scoreSpan.innerHTML = score++;
+                        
+                        correct.play();
+                        
+                    }
+                    else
+                    {
+                        
+                        wrong.play();
+                        
+                    }
+                });
+                
+                }
+                total.innerHTML = questions.length;
+                
+                
+                
+                
+            
+         
+            
+            var correct = new Audio("https://www.dropbox.com/s/ehdu5ilfh5f96h8/Sololearn%20Correct.mp3?dl=1&raw=1");
+    var wrong = new Audio("https://www.dropbox.com/s/zxbq3favobpexi3/Sololearn%20Wrong.mp3?dl=1&raw=1");
+        </script>
+    </body>
+</html>
