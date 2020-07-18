@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-        crossorigin="anonymous">
-<!--  <link rel="stylesheet" href="../static/css/font-awesome.min.css">-->
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
   <link rel="stylesheet" href="../static/css/bootstrap.css">
   <link rel="stylesheet" href="../static/css/style.css">
-  <title>E-Assessment Analysis & Authentication</title>
+  <title>E-test</title>
 </head>
-
 <body>
-
   <nav class="navbar navbar-toggleable navbar-inverse bg-inverse fixed-top">
     <div class="container">
       <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="#" class="navbar-brand">E-Assessment Authentication</a>
+      <a href="#" class="navbar-brand">E-Assesment Analysis & Authentication</a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#explore-head-section">Explore</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.html">SignIn</a>
+            <a class="nav-link" href="/login.html">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#share-head-section">FAQ</a>
+            <a class="nav-link" href="#share-head-section">Result</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
 
   <!-- HOME SECTION -->
   <header id="home-section">
@@ -48,41 +41,44 @@
       <div class="home-inner">
         <div class="container">
           <div class="row">
-            <div class="col-md-8">
-              <h3 class="display-4">THE <strong>Best Quiz Maker </strong></h3>
-              <div class="d-flex flex-row">
-                <div class="p-4 align-self-start">
-                  <i class="fa fa-check"></i>
+            <div class="col-md-8 d-none d-md-block">
+              <h1 class="display-4">The <strong>Best Quiz Maker</strong> for <atrong>Education</strong></h1>
+                <div class="d-flex flex-row">
+                  <div class="p-4 align-self-start">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="p-4 align-self-end">
+                     E-Assesment secure, professional web-based Quiz maker is an easy-to-use,
+                     customizable online testing solution for business,
+                     training & educational assessment with Tests & Quizzes graded instantly saving you hours of paperwork!
+                  </div>
                 </div>
-                <div class="p-4 align-self-end">
-                  Custom Certificates & Exam branding
-                </div>
-              </div>
 
-              <div class="d-flex flex-row">
-                <div class="p-4 align-self-start">
-                  <i class="fa fa-check"></i>
+                <div class="d-flex flex-row">
+                  <div class="p-4 align-self-start">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="p-4 align-self-end">
+                    Students’ exams in E-learning are remotely submitted without any monitoring from physical proctors.
+                     Analysing live surveillance videos for detecting activities that take place in its coverage area has become more important. 
+                  </div>
                 </div>
-                <div class="p-4 align-self-end">
-                  Create Assistants to help manage your account
-                </div>
-              </div>
 
-              <div class="d-flex flex-row">
-                <div class="p-4 align-self-start">
-                  <i class="fa fa-check"></i>
+                <div class="d-flex flex-row">
+                  <div class="p-4 align-self-start">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="p-4 align-self-end">
+                    Our Website aims to detect suspicious activities such as frequent head movements or eyes movement and peeping into other’s answer sheet from the video captured by a webcam during examinations.
+                  </div>
                 </div>
-                <div class="p-4 align-self-end">
-                  Results automatically graded & viewable in real time
-                </div>
-              </div>
             </div>
             <div class="col-md-4">
-              <div class="card card-form text-center " style="border:none">
+              <div class="card card-form text-center" style="background-color:#865375">
                 <div class="card-block">
                   <h3>Sign Up Today</h3>
                   <p>Please fill out this form to register</p>
-                  <form>
+                  <form action="/login.html">
                     <div class="form-group">
                       <input type="text" name="username" class="form-control form-control-lg" placeholder="Username">
                     </div>
@@ -90,22 +86,16 @@
                       <input type="email" name="email" class="form-control form-control-lg" placeholder="Email">
                     </div>
                     <div class="form-group">
-                      <input type="password" name="password" class="form-control form-control-lg"
-                        placeholder="Password">
+                      <input type="password" name="password" class="form-control form-control-lg" placeholder="Password">
                     </div>
                     <div class="form-group">
-                      <input type="password" name="password2" class="form-control form-control-lg"
-                        placeholder="Confirm Password">
+                      <input type="password" name="password2" class="form-control form-control-lg" placeholder="Confirm Password">
                     </div>
-                    <input type="submit"  value="Submit" class="btn btn-outline-secondary btn-block">
+                    <div class="form-group">
+                        <input type="file" id="myFile" name="filename">
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-outline-secondary btn-block">
                   </form>
-                  <div class="col-12 forgot">
-                    <p>
-                        Already a member? <a href="login.html">Sign in</a>
-                    </p>
-
-                </div>
-
                 </div>
               </div>
             </div>
@@ -121,9 +111,9 @@
       <div class="row">
         <div class="col text-center">
           <div class="py-5">
-            <h1 class="display-4">Explore</h1>
-            <p class="lead">E-examination is an integral and vital component of E-learning. Students’ exams in E-learning are remotely submitted without any monitoring from physical proctors. As a result students are able to easily cheat during e-exams
-                 If succesfull this project will be able to provide anti-cheating methods to cope up with these problems</p>
+            <h1 class="display-4">Our System</h1>
+            <p class="lead">The system will be monitoring the candidate through video streaming. It will track the candidate's behaviour throughout the exam and will alert if any suspicious behaviour is detected. This is the main feature of the system and will eliminate the need of physical invigilation hence saving time and resources. It will also reduce the possibility of cheating during online tests.</p>
+            <!-- <a href="#" class="btn btn-outline-secondary">Find Out More</a> -->
           </div>
         </div>
       </div>
@@ -135,18 +125,17 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <img src="./static/css/img/h3.jpeg" alt="" class="img-fluid mb-3 rounded-circle">
+          <img src="../static/css/img/Online-Test.png" alt="" class="img-fluid mb-3 rounded-circle">
         </div>
         <div class="col-md-6">
-          <h2>Create Custom Tests & Exams Online</h2>
-          <p>Our software first recoginizes the candidate through face recognition if the identity of the candidate is authentic then the system will proceed to login, after that it ensures the candidate focuses on the test screen; monitors the light and other factors in the room; checks for suspicious objects and background voice activity; and watches the browser window to detect changes. Any of these will immediately red flag the test!.</p>
+          <h3>About Us</h3>
+          <p>We understand every organization is different. That's why we've created affordable Online Testing Plans to suit your needs. From occasional usage to Enterprise Quiz Maker requirements, E-assesment Analysis & Authentication is your reliable exam maker and online testing solution.</p>
           <div class="d-flex flex-row">
             <div class="p-4 align-self-start">
               <i class="fa fa-check"></i>
             </div>
             <div class="p-4 align-self-end">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis vero ullam sed amet eaque eum, ut
-              quidem dolores illum commodi inventore
+                Used globally for business & enterprise training Tests, pre-employment assessments, online certifications and compliance, recruitment & health and safety quizzes, schools, universities, distance learning, lead generation, online courses, E-Learning, practice Tests & more.
             </div>
           </div>
 
@@ -155,8 +144,7 @@
               <i class="fa fa-check"></i>
             </div>
             <div class="p-4 align-self-end">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis vero ullam sed amet eaque eum, ut
-              quidem dolores illum commodi inventore
+                The system will also be authenticating the ID of the candidate taking the exam through face recognition. This feature will eliminate the possibility of any unauthorized person taking the test in place of someone else.
             </div>
           </div>
         </div>
@@ -164,9 +152,148 @@
     </div>
   </section>
 
-<!--  <script src="js/jquery.min.js"></script>-->
-<!--  <script src="js/tether.min.js"></script>-->
-<!--  <script src="js/bootstrap.min.js"></script>-->
-</body>
+  <!-- CREATE HEAD -->
+  <section id="create-head-section" style="background-color:#865375">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <div class="py-5">
+            <h1 class="display-4">Secure Online Quiz Maker</h1>
+            <p class="lead">E-examination is an integral and vital component of E-learning. Students’ exams in E-learning are remotely submitted without any monitoring from physical proctors. Analysing live surveillance videos for detecting activities that take place in its coverage area has become more important. This project aims to detect suspicious activities such as frequent head movements or eyes movement and peeping into other’s answer sheet from the video captured by a webcam during examinations. If the candidate is exhibiting suspicious behavior it will immediately flag the test and ultimately terminate it.</p>
+            <a href="#" class="btn btn-outline-secondary">Find Out More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- CREATE SECTION -->
+  <section id="create-section" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Quiz Instructions</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis aliquam sed cum, sunt, quia dicta? Animi, commodi</p>
+          <div class="d-flex flex-row">
+            <div class="p-4 align-self-start">
+              <i class="fa fa-check"></i>
+            </div>
+            <div class="p-4 align-self-end">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis vero ullam sed amet eaque eum, ut quidem dolores illum commodi inventore
+            </div>
+          </div>
+
+          <div class="d-flex flex-row">
+            <div class="p-4 align-self-start">
+              <i class="fa fa-check"></i>
+            </div>
+            <div class="p-4 align-self-end">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis vero ullam sed amet eaque eum, ut quidem dolores illum commodi inventore
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="../static/css/img/create-section1.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARE HEAD -->
+  <section id="share-head-section" style="background-color:#865375">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <div class="py-5">
+            <h1 class="display-4">Share</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nulla ducimus veniam repellat nostrum, placeat aperiam maiores! Dicta, voluptatum molestiae.</p>
+            <a href="#" class="btn btn-outline-secondary">Find Out More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARE SECTION -->
+  <section id="share-section" class="bg-faded text-muted py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../static/css/img/home1.jpeg" alt="" class="img-fluid mb-3 rounded-circle">
+        </div>
+        <div class="col-md-6">
+          <h3>Share what you create</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis aliquam sed cum, sunt, quia dicta? Animi, commodi, neque incidunt non atque aliquid voluptates nostrum, inventore tenetur asperiores a necessitatibus ut.</p>
+          <div class="d-flex flex-row">
+            <div class="p-4 align-self-start">
+              <i class="fa fa-check"></i>
+            </div>
+            <div class="p-4 align-self-end">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis vero ullam sed amet eaque eum, ut quidem dolores illum commodi inventore
+            </div>
+          </div>
+
+          <div class="d-flex flex-row">
+            <div class="p-4 align-self-start">
+              <i class="fa fa-check"></i>
+            </div>
+            <div class="p-4 align-self-end">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis vero ullam sed amet eaque eum, ut quidem dolores illum commodi inventore
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN FOOTER -->
+  <footer id="main-footer" class="bg-inverse">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <div class="py-4">
+            <h1 class="h3">E-Assesment Analysis & Authentication</h1>
+            <p>Copyright &copy; 2020</p>
+            <button style="background-color:#865375" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal fade" id="contactModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+          <button class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-block">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
 </html>
