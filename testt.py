@@ -9,16 +9,17 @@ def calculatedistance(x1, y1, x2, y2):
 
 
 cascPath = 'haarcascade_frontalface_default.xml'
-faceCascade = cv2.CascadeClassifier(cascPath)
+faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + cascPath)
 noseCascade = cv2.CascadeClassifier('haarcascade_mcs_nose.xml')
 
 
 video_capture = cv2.VideoCapture(0)
+currentFrame = 0
+var=20
 
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
-
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     faces = faceCascade.detectMultiScale(
@@ -56,13 +57,18 @@ while True:
             # cv2.circle(frame, ((x + (w // 2)), y + h), 2, (255, 0, 0), -1)  #bottom
             cv2.line(frame, (ex + (ew // 2), ey + (eh // 2)), ((x + (w // 2)), y + h), (255, 0, 0), 2)  # center to bottom
             d2 = calculatedistance(ex + (ew // 2), ey + (eh // 2), x + (w // 2), y + h)  # distance center to bottom
-            print(d2)
+            if currentFrame == var:
+                var += 20
+                print(currentFrame)
+                print(d2)
 
     # Display the resulting frame
     cv2.imshow('Video', frame)
+    currentFrame += 1
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
 
 # When everything is done, release the capture
 video_capture.release()
