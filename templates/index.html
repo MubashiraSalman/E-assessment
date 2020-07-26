@@ -78,21 +78,21 @@
                 <div class="card-block">
                   <h3>Sign Up Today</h3>
                   <p>Please fill out this form to register</p>
-                  <form action="/login.html">
+                  <form action="/login.html" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                      <input type="text" name="username" class="form-control form-control-lg" placeholder="Username">
+                      <input type="text" name="username" class="form-control form-control-lg" placeholder="Username" required>
                     </div>
                     <div class="form-group">
-                      <input type="email" name="email" class="form-control form-control-lg" placeholder="Email">
+                      <input type="email" name="email" class="form-control form-control-lg" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                      <input type="password" name="password" class="form-control form-control-lg" placeholder="Password">
+                      <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required>
                     </div>
                     <div class="form-group">
-                      <input type="password" name="password2" class="form-control form-control-lg" placeholder="Confirm Password">
+                      <input type="password" name="password2" class="form-control form-control-lg" placeholder="Confirm Password" required>
                     </div>
                     <div class="form-group">
-                        <input type="file" id="myFile" name="filename">
+                        <input type="file" id="myFile" name="filename" required>
                     </div>
                     <input type="submit" value="Submit" class="btn btn-outline-secondary btn-block">
                   </form>
@@ -270,7 +270,7 @@
           <button class="close" data-dismiss="modal"><span>&times;</span></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form action="login.html" method="post">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" class="form-control" id="name">
