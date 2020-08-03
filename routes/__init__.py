@@ -3,6 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from app import app
 from models.register import Register
 from db import db
+import webimage
 
 
 @app.route('/', methods=['GET'])
@@ -22,7 +23,7 @@ def signup():
     file = request.files['filename']
     new_file = file.read()
 
-    user = Register.query.filter_by(email=email).first()  # if this returns a user, then the email already exists in database
+    user = Register.query.filter_by(email=email).first() # if this returns a user, then the email already exists in database
 
     if user:  # if a user is found, we want to redirect back to signup page so user can try again
         return redirect('/index.html')
@@ -48,6 +49,7 @@ def login_post():
     if not user or not (user.password == password):
         return redirect('/login.html')  # if the user doesn't exist or password is wrong, reload the page
     else:
+        webimage.image_cap()
         return redirect('/test.html')
 
 
