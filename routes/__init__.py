@@ -4,6 +4,8 @@ from app import app
 from models.register import Register
 from db import db
 import webimage
+import base64
+import cv2
 
 
 @app.route('/', methods=['GET'])
@@ -50,6 +52,13 @@ def login_post():
         return redirect('/login.html')  # if the user doesn't exist or password is wrong, reload the page
     else:
         webimage.image_cap()
+        data = user.photo
+        # with open("imageToSave.png", "wb") as fh:
+        #     fh.write(base64.decodebytes(img))
+        # img.decode('base64')
+        # cv2.imwrite(filename='imagefromdb.jpg', img=img)
+        with open('photo.jpg', 'wb') as file:
+            file.write(data)
         return redirect('/test.html')
 
 
