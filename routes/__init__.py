@@ -47,16 +47,12 @@ def login_post():
     user = Register.query.filter_by(email=email).first()
 
     # check if the user actually exists
-    # take the user-supplied password, hash it, and compare it to the hashed password in the database
+    # take the user-supplied password and compare it to the password in the database
     if not user or not (user.password == password):
         return redirect('/login.html')  # if the user doesn't exist or password is wrong, reload the page
     else:
         webimage.image_cap()
         data = user.photo
-        # with open("imageToSave.png", "wb") as fh:
-        #     fh.write(base64.decodebytes(img))
-        # img.decode('base64')
-        # cv2.imwrite(filename='imagefromdb.jpg', img=img)
         with open('photo.jpg', 'wb') as file:
             file.write(data)
         return redirect('/test.html')
