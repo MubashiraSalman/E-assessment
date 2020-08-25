@@ -2,10 +2,9 @@ from flask import Flask, abort, redirect, request, render_template, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import app
 from models.register import Register
-from db import db
 import webimage
-import base64
-import cv2
+import fr
+import win32api
 
 
 @app.route('/', methods=['GET'])
@@ -25,7 +24,7 @@ def signup():
     file = request.files['filename']
     new_file = file.read()
 
-    user = Register.query.filter_by(email=email).first() # if this returns a user, then the email already exists in database
+    user = Register.query.filter_by(email=email).first()  # if this returns a user, then the email already exists in database
 
     if user:  # if a user is found, we want to redirect back to signup page so user can try again
         return redirect('/index.html')
@@ -55,7 +54,13 @@ def login_post():
         data = user.photo
         with open('photo.jpg', 'wb') as file:
             file.write(data)
-        return redirect('/test.html')
+        result = fr.image_compare()
+        if result:
+            win32api.MessageBox(0, 'Identity Matched', 'Alert')
+            return redirect('/test.html')
+        else:
+            win32api.MessageBox(0, 'Identity Not Matched', 'Alert')
+            return redirect('/login.html')
 
 
 @app.route('/test.html', methods=['GET'])

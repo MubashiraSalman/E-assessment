@@ -12,9 +12,9 @@ def image_cap():
             cv2.imshow("Capturing", frame)
             key = cv2.waitKey(1)
             if key == ord('s'):
-                cv2.imwrite(filename='saved_img.jpg', img=frame)
+                cv2.imwrite(filename='images/saved_img.jpg', img=frame)
                 webcam.release()
-                img_new = cv2.imread('saved_img.jpg', cv2.IMREAD_GRAYSCALE)
+                img_new = cv2.imread('images/saved_img.jpg', cv2.IMREAD_GRAYSCALE)
                 img_new = cv2.imshow("Captured Image", img_new)
                 cv2.waitKey(1650)
                 cv2.destroyAllWindows()

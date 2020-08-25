@@ -15,7 +15,7 @@ noseCascade = cv2.CascadeClassifier('haarcascade_mcs_nose.xml')
 
 video_capture = cv2.VideoCapture(0)
 currentFrame = 0
-var=20
+var = 20
 
 while True:
     # Capture frame-by-frame

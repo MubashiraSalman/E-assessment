@@ -4,8 +4,13 @@
     <list default="true" id="eceb35d9-8e94-4f47-a47f-9c953906a509" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fr.py" beforeDir="false" afterPath="$PROJECT_DIR$/fr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/saved_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shah_rukh_khan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/register.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/saved_img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testt.py" beforeDir="false" afterPath="$PROJECT_DIR$/testt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webimage.py" beforeDir="false" afterPath="$PROJECT_DIR$/webimage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
