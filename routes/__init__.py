@@ -5,6 +5,7 @@ from models.register import Register
 import webimage
 import fr
 import win32api
+from subprocess import *
 
 
 @app.route('/', methods=['GET'])
@@ -57,14 +58,18 @@ def login_post():
         result = fr.image_compare()
         if result:
             win32api.MessageBox(0, 'Identity Matched', 'Alert')
-            return redirect('/test.html')
+            return redirect('/start.html')
         else:
             win32api.MessageBox(0, 'Identity Not Matched', 'Alert')
             return redirect('/login.html')
 
 
-@app.route('/test.html', methods=['GET'])
+@app.route('/start.html', methods=['GET'])
 def start_test():
-    return render_template('/test.html')
+    p = Popen('python ./testt.py')
+    return render_template('start.html')
 
 
+@app.route('/testpage.html', methods=['GET'])
+def start_test2():
+    return render_template('test.html')
