@@ -1,7 +1,6 @@
 from flask import Flask, abort, redirect, request, render_template, flash
-from werkzeug.security import generate_password_hash, check_password_hash
-from app import app
 from models.register import Register
+from app import app
 import webimage
 import fr
 import win32api

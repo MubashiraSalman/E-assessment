@@ -10,7 +10,7 @@ def calculatedistance(x1, y1, x2, y2):
     return dist
 
 
-driver = webdriver.Chrome('chromedriver.exe')
+driver = webdriver.Chrome('C:/Users/Mubashira Salman/Desktop/chromedriver.exe')
 cascPath = 'haarcascade_frontalface_default.xml'
 faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + cascPath)
 noseCascade = cv2.CascadeClassifier('haarcascade_mcs_nose.xml')
