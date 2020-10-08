@@ -24,7 +24,8 @@ def signup():
     file = request.files['filename']
     new_file = file.read()
 
-    user = Register.query.filter_by(email=email).first()  # if this returns a user, then the email already exists in database
+    user = Register.query.filter_by(
+        email=email).first()  # if this returns a user, then the email already exists in database
 
     if user:  # if a user is found, we want to redirect back to signup page so user can try again
         return redirect('/index.html')
