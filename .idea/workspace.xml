@@ -2,11 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eceb35d9-8e94-4f47-a47f-9c953906a509" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testt.py" beforeDir="false" afterPath="$PROJECT_DIR$/testt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.spec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/Analysis-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/EXE-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/PKG-00.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/PKG-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/PYZ-00.pyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/PYZ-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/app.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/warn-app.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/xref-app.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/saved_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.spec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_img.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
